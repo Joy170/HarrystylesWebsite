@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <div id="myNav" class="overlay">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+		   <a href="index.html">Home</a>
+            <a href="myAccount.html">My Account</a>
+            <a href="appointment.html">Financial</a>
+            <a href="#">Disabilites</a>
+            <a href="#">Learning</a>
+            <a href="#">Student Advice</a>
+            <a href="#">Welfare and Mental Health</a>
+        </div>
+    </div>
+
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+    <div class="row">
+        <div class="leftcolumn">
+            <div class="header">
+               <div class="typewriter">
+			        <img src="logo.png" alt="logo of uni" align="middle" style="max-width:100%;">
+
+  <h1>Discovery Updates</h1>
+  <p>The latest news</p>
+
+</div>
+
+            </div>
+
+            <div class="card">
+                <h2>Events</h2>
+                <h5>Mental Health Meetings, Dec 7, 2017</h5>
+                <div class="fakeimg" style="height:300px;"><img style="max-height:300px;max-width:100%;" src="mentalEvent.jpg"></div>
+                <br><a href="www.google.com">Click here to read more</a>
+                <p> We have recently opened up our meetign for mental health. Fromt oday on it is open for all students, everyone is welcome. We will also have small events where more groupd can meet up together and speak about their issues, as well as m´private consulatition.</p>
+            </div>
+            <div class="card">
+                <h2>Eating healthy during Uni life</h2>
+                <h5>The student cookbook, Sep 2, 2017</h5>
+                <div class="fakeimg" style="height:300px;"><img style="max-height:300px;max-width:100%;" src="studentCook.jpg"></div>
+                <p>A quick intro</p>
+                <p>Feeling stressed, gaining weight in uni, want to eat healthier but dotn have the time? Here are some top tips to do so!</p>
+            </div>
+        </div>
+
+
+        <!-- keep things in here for the rigth side-->
+
+        <div class="rightcolumn">
+            <div class="card">
+                <h2>Coming up</h2>
+                <div class="fakeimg"><img style="max-height:250px;max-width:100%;" src="comingUp.jpg"></div>
+                <p>How to budget, as a student</p>
+            </div>
+            
+            <div class="card">
+                <h3>Create a new appointmet</h3>
+                <a href="#headerMain">back to top of the page</a>
+            </div>
+        </div>
+    </div>
+
+	   
+    <?php //filezilla later, to be seen and change document to php
+         include 'footer.php'; // has the navbar and footer
+         ?>
+
+        <script>
+            function openNav() {
+                document.getElementById("myNav").style.height = "100%";
+            }
+
+            function closeNav() {
+                document.getElementById("myNav").style.height = "0%";
+            }
+        </script>
+</body>
+
+</html>

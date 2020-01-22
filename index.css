@@ -1,0 +1,150 @@
+body {
+  font-family: "Lato", sans-serif;
+  background-color:#A4B7E2;
+}
+
+.overlay {
+	height:0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(179,171,160);
+  background-color: rgb(179,171,160,0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
+  font-family: monospace;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #505050;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  right: 45px;
+  top:20px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+  
+}
+
+}
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+#h1index
+{
+ text-align: center;
+ color:blue;
+}
+
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: beige;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 90%;
+  padding-left: 20px;
+
+}
+
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 90%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color:beige;
+  max-width: 100%;
+  height: auto;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+   background-color: beige;
+   padding: 20px;
+   margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn,{   
+    width: 100%;
+    padding: 0;
+  }
+  
+}
+
+.typewriter{
+  font-family: monospace; /* Web-safe typewriter-like font */
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: typing 2.5s steps(30, end),
+  blinking-cursor .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 45% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blinking-cursor {
+  from, to { border-color: transparent }
+  50% { border-color:papayawhip ; }
+}
+

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="appointment.css">
+</head>
+
+<body>
+
+    <div id="myNav" class="overlay">
+	 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+		   <a href="index.html">Home</a>
+            <a href="myAccount.html">My Account</a>
+            <a href="appointment.html">Financial</a>
+            <a href="#">Disabilites</a>
+            <a href="#">Learning</a>
+            <a href="#">Student Advice</a>
+            <a href="#">Welfare and Mental Health</a>
+        </div>
+    </div>
+
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+	<br>
+
+<div class="typewriter">
+  <h1>Finance</h1>
+  <p>For your monetary problems</p>
+</div>
+
+
+    <br><br><p> We are here so that we can give you any information regarding financial issues. Below you can also schedule a private appointment to discuss more personal problems regarding anything financial wise.</p>
+     <p>Topics on information we provide:</p>
+	 <p>Handling a budget, your student debt, SAAS, grants, how to look for good deals as a student etc.</p>
+   	 <hr>
+	 
+
+ <p>Quick tips on how to handle your money:</p>
+
+    <ul id="budget">
+        <li>Give yourself a <strong>budget</strong> for each week</li>
+        <li>Track your spendings</li>
+        <li>Try to go grocerry shopping isntead of eating out</li>
+    </ul>
+    <p>All students are welcome to book a personal appointment with us if they are suffering under any circumstances.</p>
+    <h4>Pick a date for an appointment below</h4>
+    <div class="month">
+        <ul>
+            <li class="prev" onclick="myFunction2()">&#10094;</li>
+            <li class="next" onclick="myFunction()">&#10095;</li>
+            <li id="change">
+                August
+                <br>
+            </li>
+        </ul>
+    </div>
+    <ul class="weekdays">
+        <li>Mo</li>
+        <li>Tu</li>
+        <li>We</li>
+        <li>Th</li>
+        <li>Fr</li>
+        <li>Sa</li>
+        <li>Su</li>
+    </ul>
+    <ul class="days" onclick="pressed()">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+        <li>15</li>
+        <li>16</li>
+        <li>17</li>
+        <li>18</li>
+        <li>19</li>
+        <li>20</li>
+        <li>21</li>
+        <li>22</li>
+        <li>23</li>
+        <li>24</li>
+        <li>25</li>
+        <li>26</li>
+        <li>27</li>
+        <li>28</li>
+        <li>29</li>
+        <li>30</li>
+        <li>31</li>
+    </ul>
+
+    <br>
+    <form action="/action_page.php">
+        Comments:
+        <input class="button button4" type="text" name="comments">
+        <br>
+        <br>
+        <input class="button button4" name="Gray" value="submit">
+    </form>
+    <p id="aboutAppointment"></p>
+
+    <?php //filezilla later, to be seen and change document to php
+         include 'footer.php'; // has the navbar and footer
+         ?>
+
+        <script>
+            function openNav() {
+                document.getElementById("myNav").style.height = "100%";
+            }
+
+            function closeNav() {
+                document.getElementById("myNav").style.height = "0%";
+            }
+		function myFunction() {
+           document.getElementById("change").innerHTML = "September";
+         }
+         function myFunction2() {
+           document.getElementById("change").innerHTML = "July";
+         }
+		 function pressed(){
+		 var txt; 
+		 if (confirm("This date is taken/free!")){//this shoudl connect to db to see if the date it free or not {
+			txt = "Something about the appointment!";
+			} else {
+			txt = "You pressed Cancel!"; //if user presses cancel in popup
+			}
+			document.getElementById("aboutAppointment").innerHTML = txt; //whats shown in the paragrah tag under submit button
+		 }
+			
+        </script>
+</body>
+
+</html>
